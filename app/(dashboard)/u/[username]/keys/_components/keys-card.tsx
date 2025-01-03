@@ -3,7 +3,7 @@
 import { Input } from '@/components/ui/input'
 import React, { useState } from 'react'
 import CopyButton from './copy-button';
-import { Eye, EyeOff, HistoryIcon } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 
 interface KeysCardProps {
   value: string | null;
