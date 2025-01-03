@@ -6,7 +6,7 @@ import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogTr
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Hint } from "../Hint";
-import { Router, Trash } from "lucide-react";
+import { Trash } from "lucide-react";
 import Image from "next/image";
 import { UploadDropzone } from "@/lib/uploadthing";
 import { useRouter } from "next/navigation";
