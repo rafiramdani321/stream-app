@@ -46,6 +46,4 @@ const PageChatWithSuspense = () => {
   );
 }
 
-export default {
-  PageChat, PageChatWithSuspense
-};
+export default PageChatWithSuspense;
