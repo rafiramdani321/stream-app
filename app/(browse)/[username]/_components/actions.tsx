@@ -25,7 +25,7 @@ const Actions = ({
   const handleFollow = () => {
     startTransition(() => {
       onFollow(otherUserId)
-        .then((data) => toast.success(`You are now following ${data.following.username}`))
+        .then((data) => toast.success(`You are now following ${data?.following.username}` || "Unknown User"))
         .catch((error) => toast.error(error.message || "Something went wrong"))
     })
   }
@@ -53,7 +53,7 @@ const Actions = ({
   const handleBlock = () => {
     startTransition(() => {
       onBlock(otherUserId)
-        .then((data) => toast.success(`Block the user ${data.blocked.username}`))
+        .then((data) => toast.success(`Block the user ${data?.blocked.username}`))
         .catch((error) => toast.error(error.message || "Something went wrong"))
     });
   }
