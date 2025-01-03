@@ -4,7 +4,7 @@ import React, { Suspense } from 'react'
 import ToggleCard from './_components/toggle-card';
 import ChatLoading from './_components/loading';
 
-export const PageChat = async () => {
+const PageChat = async () => {
   const self = await getSelf();
   const stream = await getStreamByUserId(self.id);
 
@@ -38,10 +38,14 @@ export const PageChat = async () => {
   )
 }
 
-export default function PageChatWithSuspense() {
+const PageChatWithSuspense = () => {
   return (
     <Suspense fallback={<ChatLoading />}>
       <PageChat />
     </Suspense>
   );
 }
+
+export default {
+  PageChat, PageChatWithSuspense
+};
